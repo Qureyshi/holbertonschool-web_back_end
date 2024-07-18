@@ -1,0 +1,13 @@
+{
+  "name": "your-project-name",
+  "version": "1.0.0",
+  "description": "A description of your project",
+  "main": "0-main.js",
+  "type": "module",
+  "scripts": {
+    "dev": "node 0-main.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
+
