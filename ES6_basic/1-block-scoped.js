@@ -1,17 +1,12 @@
-// 1-block-scoped.js
-
+/* eslint-disable */
 export default function taskBlock(trueOrFalse) {
-  // Declare variables using let to ensure block scoping
-  let task = false;
-  let task2 = true;
+  const task = false;
+  const task2 = true;
 
   if (trueOrFalse) {
-    // Declare new variables scoped to this block
-    let task = true;
-    let task2 = false;
+    const task = true;
+    const task2 = false;
   }
 
-  // Return the variables from the outer block scope
   return [task, task2];
 }
-
