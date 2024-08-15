@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 """
-Module that contains type annotated function
-that returns the floor of the float
+returns the floor of the float
 """
 
 
