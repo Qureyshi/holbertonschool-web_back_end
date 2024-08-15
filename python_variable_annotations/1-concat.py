@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 """
-Module that contains type-annotated function to
 concatenate strings and to return string
 """
 
