@@ -1,4 +1,4 @@
-# 0-basic_async_syntax.py
+#!/usr/bin/env python3
 import asyncio
 import random
 
