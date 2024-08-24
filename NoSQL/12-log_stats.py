@@ -1,24 +1,23 @@
 #!/usr/bin/env python3
-""" Write a Python MongoDB
 """
-from pymongo import MongoClient
+Checking Nginx stats
+"""
+import pymongo
+
 
 if __name__ == "__main__":
-    """ Database: logs
-        Collection: nginx
     """
-    client = MongoClient('mongodb://127.0.0.1:27017')
+    Logs...
+    """
+    client = pymongo.MongoClient('mongodb://127.0.0.1:27017')
     collection = client.logs.nginx
-
-    n_logs = collection.count_documents({})
-    print(f'{n_logs} logs')
+    doc_count = collection.estimated_document_count()
+    print("{} logs".format(doc_count))
+    print("Methods:")
     methods = ["GET", "POST", "PUT", "PATCH", "DELETE"]
-    print('Methods:')
     for method in methods:
-        count = collection.count_documents({"method": method})
-        print(f'\tmethod {method}: {count}')
-
-    status_check = collection.count_documents(
-        {"method": "GET", "path": "/status"}
-        )
-    print(f'{status_check} status check')
+        method_count = collection.count_documents({'method': method})
+        print("\tmethod {}: {}".format(method, method_count))
+    status_count = collection.count_documents(
+                {'method': 'GET', 'path': "/status"})
+    print("{} status check".format(status_count))
