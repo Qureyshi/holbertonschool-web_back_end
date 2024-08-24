@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 """
-Checking Nginx stats
+Log stats
 """
 import pymongo
 
 
 if __name__ == "__main__":
     """
-    Logs...
+    nginx
     """
     client = pymongo.MongoClient('mongodb://127.0.0.1:27017')
     collection = client.logs.nginx
