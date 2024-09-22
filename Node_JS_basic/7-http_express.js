@@ -8,9 +8,12 @@ app.get('/', (req, res) => {
 });
 
 app.get('/students', async (req, res) => {
+    let message = 'This is the list of our students\n';
+
     try {
         const data = await countStudents(process.argv[2]);
-        res.send(data);
+        message += data;  // Assuming countStudents returns the formatted data.
+        res.send(message);
     } catch (error) {
         res.status(500).send(error.message);
     }
